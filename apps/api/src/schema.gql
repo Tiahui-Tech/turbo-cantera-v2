@@ -10,4 +10,11 @@ type Post {
 
 type Query {
   posts: [Post!]!
+  post(id: Float!): Post!
+}
+
+type Mutation {
+  createPost(title: String!, content: String): Post!
+  updatePost(id: Float!, title: String, content: String): Post!
+  deletePost(id: Float!): Post!
 }
